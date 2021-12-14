@@ -1,14 +1,80 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola grupo 14</title>
+    <title>Grupo 14</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilo.css">
+
+    <script>
+        
+        function suma(){
+            var puntos = Number(document.getElementById("puntos").innerHTML);
+            var suma   = puntos + 1;
+            document.getElementById("puntos").innerHTML = suma;
+        }
+
+        function calculo(){
+            var puntos = Number(document.getElementById("puntos").innerHTML);
+
+            if (puntos>=10){
+                alert("Suficiente!...");
+            } else {
+                alert("Todavia falta...");
+            }
+            
+        }
+
+    </script>
+    
+
 </head>
+
 <body>
-    <h1>Trabajando con el grupo 14</h1>
-    <p>Martes 30 de Noviembre</p>
-    prueba comparacion 2
+
+   <div id="menu">
+
+        <div id="titulo">
+                <h3>Yo</h3>
+        </div>
+
+        <div id="navegacion" style="float: left; width: 30%;">
+                <ul style="list-style: none;">
+                    <li style="float: left; width: 100px;"> <a href="index.html">QUIEN</a></li>
+                    <li style="float: left; width: 100px;"> <a href="que.html">QUE</a></li>
+                    <li style="float: left; width: 100px;">  <a href="donde.html"  class="texto_verde">DONDE</a></li>
+                </ul>
+        </div>
+
+
+   </div>
+
+   <div id="cuerpo" style="background-color: #1abc9c; float: left; width: 100%; height: 600px; padding-top: 100px;">
+
+            <h3 style="text-align: center; ">QUIEN SOY</h3>
+
+            <p style="text-align: center;"><img src="img/aguila.jpg" style="border-radius: 200px; margin: 20px 0px 20px 0;"></p>
+
+            <h3 style="text-align: center; ">SOY UN AVENTURERO</h3>
+
+   </div>
+
+   <div id="descripcion">
+        <form>
+            <input type="button" value="CLICK PARA SUMAR PUNTOS" onclick="suma()">
+            <P>Mis puntos son <span id="puntos">0</span></P>
+
+            <input type="button" value="CALCULO" onclick="calculo()">
+
+        </form>
+
+
+   </div>
 </body>
+
 </html>
